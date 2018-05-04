@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="false">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/logo_news"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:src="@drawable/title_cat"
+        android:background="@color/colorPrimary"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/colorPrimary">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="50dp"
+            android:paddingLeft="15dp"
+            android:id="@+id/magic_indicator"></net.lucode.hackware.magicindicator.MagicIndicator>
+
+        <ImageView
+            android:id="@+id/add_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_add_white_24dp"
+            android:scaleType="centerInside"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimary"/>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,196 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.pgg.qboxdemo"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled false
+    }
+
+    greendao {
+        //数据库schema版本，也可以理解为数据库版本号
+        schemaVersion 1
+        //设置DaoMaster 、DaoSession、Dao包名
+        daoPackage 'com.example.pgg.qboxdemo.greendao.db'
+        //设置DaoMaster 、DaoSession、Dao目录
+        targetGenDir 'src/main/java'
+        //设置生成单元测试目录
+        //targetGenDirTest
+        //设置自动生成单元测试用例
+        //generateTests
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false//开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'//配置内容
+        }
+    }
+}
+MobSDK {
+    appKey "258cc13a22e76"
+    appSecret "89a001dbd73ff2191b763d836d9397e0"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            SinaWeibo {
+                appKey "3225684856"
+                appSecret "e45f2dcbbae278f35bdf340ad46c5a90"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient false
+            }
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            QQ {
+                appId "1106877456"
+                appKey "abzrKDZRDgc9HsIZ"
+            }
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    google()
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+    compile 'com.android.support:multidex:1.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation project(':magicindicator')
+    compile 'com.android.support:design:26.+'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:support-vector-drawable:26.+'
+
+    //butterknife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //   权限管理
+    compile 'com.github.hotchemi:permissionsdispatcher:2.1.3'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.1.3'
+
+    //日志记录
+    compile 'com.orhanobut:logger:1.15'
+
+    //图片加载库
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+
+    //圆形控件
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    //网络加载框架
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    //异步加载框架
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    //引导页加载库
+    compile 'com.cleveroad:slidingtutorial:1.0.5'
+
+    //百分比布局
+    compile 'com.android.support:percent:26.1.0'
+
+    //动画库
+    compile 'com.nineoldandroids:library:2.4.0'
+
+    //监听网络连接状态与WiFi信号强度
+    compile 'com.github.pwittchen:reactivenetwork:0.5.2'
+
+    //图片轮播
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+
+    //卡片布局
+    compile 'com.android.support:cardview-v7:26.+'
+
+    //优化recycleView
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.0'
+
+    //数据库
+    compile 'org.greenrobot:greendao:3.2.0'
+
+    //水波点击效果
+    compile 'com.github.traex.rippleeffect:library:1.3'
+
+    //支持矢量图
+    compile 'com.android.support:support-vector-drawable:26.+'
+
+    //照片处理框架
+    compile 'com.jph.takephoto:takephoto_library:4.0.3'
+
+    //颜色选择画板
+    compile 'com.github.QuadFlask:colorpicker:0.0.13'
+
+    //根据文字长度自动调整字号的TextView
+    compile 'me.grantland:autofittextview:0.2.+'
+
+    //高级TextView
+    compile 'hanks.xyz:htextview-library:0.1.5'
+
+    //二维码
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+
+    //android图表库
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+
+    //android日历库
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+
+    //流式布局
+    compile 'com.google.android:flexbox:0.2.6'
+
+    //高级标签库
+    compile 'com.robertlevonyan.view:MaterialChipView:1.0.1'
+
+    //启动页
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
+
+    //高级搜索库
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    //友盟数据分析
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    //内存泄漏
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'junit:junit:4.12'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    implementation files('libs/MiPush_SDK_Client_3_2_2.jar')
+}

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">最后一盒</string>
+
+    <string name="imtrue">确定</string>
+    <string name="cancel">取消</string>
+
+    <!--类别管理-->
+    <string name="tip_drag">长按编辑,拖拽排序</string>
+    <string name="my_cahnnel">我的频道</string>
+    <string name="other_channel">更多频道</string>
+    <string name="edit">编辑</string>
+    <string name="finish">完成</string>
+    <string name="news_category">新闻频道</string>
+    <string name="set_success">设置成功</string>
+    <string name="news">资讯</string>
+    <string name="wechat">微信精选</string>
+    <string name="load_more_error">加载更多数据失败！</string>
+    <string name="title_activity_we_chat_details">WeChatDetailsActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+    </string>
+    <string name="transition_wechat_img">transition_wechat_img</string>
+    <string name="find">发现</string>
+    <string name="my">我的</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_weatheraddress">天气地点设置</string>
+    <string name="transition_userhead">transition_userhead</string>
+
+    <string name="title_activity_ledmagic">LEDMagicActivity</string>
+    <string name="title_activity_joke">笑话大全</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_random">随机笑话</string>
+    <string name="action_new">最新笑话</string>
+    <string name="loading_more_happy">加载更多快乐...</string>
+    <string name="transition_pinchimageview">transition_pinchimageview</string>
+    <string name="zxing">二维码</string>
+    <string name="title_activity_constellation">星座运势</string>
+    <string name="calendar">日历</string>
+    <string name="title_activity_china_calendar">老黄历</string>
+    <string name="title_activity_setting">设置</string>
+    <string name="account">账号与安全</string>
+    <string name="nobind">尚未绑定</string>
+    <string name="noverification">尚未验证</string>
+    <string name="verification">已验证</string>
+    <string name="closebind">解绑 \"%1$s\" 后你将无法使用 \"%1$s\" 登录小秋魔盒，你确定要解绑吗？</string>
+
+    <!-- slidingtutorial start/welcome引导页-->
+    <string name="text_web_ceo">美文/微信头条</string>
+    <string name="text_web_dev">生活必备的各种应用</string>
+    <string name="text_e_commerce">必不可少的工具大全</string>
+</resources>
