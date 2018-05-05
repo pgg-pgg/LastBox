@@ -18,4 +18,6 @@ public interface Constant {
     int NEWSFRAGMENT_CATEGORYACTIVITY_REQUESTCODE = 0x0001;
     int NEWSFRAGMENT_CATEGORYACTIVITY_RESULTCODE = 0x0010;
     String TAG_EXIT ="TAG_EXIT" ;
+
+    String SLLMS = "省流量模式";
 }

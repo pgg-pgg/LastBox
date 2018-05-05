@@ -7,13 +7,19 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.pgg.qboxdemo.R;
+import com.example.pgg.qboxdemo.database.CategoryDao;
+import com.example.pgg.qboxdemo.database.FunctionDao;
 import com.example.pgg.qboxdemo.global.Constant;
-import com.example.pgg.qboxdemo.greendao.db.CategoryEntityDao;
 import com.example.pgg.qboxdemo.model.AllCategoryBean;
 import com.example.pgg.qboxdemo.model.entities.CategoryEntity;
+import com.example.pgg.qboxdemo.model.entities.CategoryManager;
+import com.example.pgg.qboxdemo.model.entities.Function;
+import com.example.pgg.qboxdemo.model.entities.FunctionBean;
 import com.example.pgg.qboxdemo.network.NetWork;
 import com.example.pgg.qboxdemo.utils.SPUtils;
 import com.example.pgg.qboxdemo.utils.StateBarTranslucentUtils;
+import com.example.pgg.qboxdemo.utils.StreamUtils;
+import com.google.gson.Gson;
 import com.orhanobut.logger.Logger;
 import com.umeng.analytics.MobclickAgent;
 
@@ -62,8 +68,11 @@ public class WelcomeGuideActivity extends AppCompatActivity {
     };
 
     private void saveCategoryToDB(List<CategoryEntity> categoryEntities) {
-
+        CategoryDao categoryDao = new CategoryDao(getApplicationContext());
+        categoryDao.deleteAllCategory();
+        categoryDao.insertCategoryList(categoryEntities==null?(new CategoryManager(getApplicationContext()).getAllCategory()):categoryEntities);
     }
+
 
 
     @Override
@@ -77,7 +86,7 @@ public class WelcomeGuideActivity extends AppCompatActivity {
            replaceTutorialFragment();
         }
         //第一次打开APP，将功能类别存储到本地数据库
-        requestFunctionToDB();
+        saveFunctionToDB();
         //第一次打开APP，将news的所有类别保存到本地数据库
         requestCategory();
     }
@@ -97,8 +106,18 @@ public class WelcomeGuideActivity extends AppCompatActivity {
         }
     }
 
-    private void requestFunctionToDB() {
-
+    private void saveFunctionToDB() {
+        Function function=null;
+        try {
+            function=(new Gson()).fromJson(StreamUtils.get(getApplicationContext(),R.raw.function),Function.class);
+        }catch (Exception e){
+            Logger.e("读取raw中的Function json文件异常"+e.getMessage());
+        }
+        if (function!=null&&function.getFunction()!=null&&function.getFunction().size()!=0){
+            List<FunctionBean> functionBeanList = function.getFunction();
+            FunctionDao functionDao = new FunctionDao(getApplicationContext());
+            functionDao.insertFunctionBeanList(functionBeanList);
+        }
     }
 
     private void replaceTutorialFragment() {

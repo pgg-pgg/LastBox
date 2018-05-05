@@ -48,4 +48,6 @@
     <string name="text_web_ceo">美文/微信头条</string>
     <string name="text_web_dev">生活必备的各种应用</string>
     <string name="text_e_commerce">必不可少的工具大全</string>
+    <string name="empty_no_data">没有请求到数据，点击重试...</string>
+    <string name="empty_network_error">网络错误，点击重试！</string>
 </resources>

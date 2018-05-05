@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.pgg.qboxdemo.widget.FiveTwoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingRight="10dp"
+            android:weightSum="2">
+            <TextView
+                android:id="@+id/title_news_item"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="2"
+                android:textColor="#212121"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp">
+                <TextView
+                    android:id="@+id/from_news_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/news_from_shape"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="最后一盒"/>
+
+                <com.example.pgg.qboxdemo.widget.IconFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:text="&#xe644;"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/time_news_item"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#757575"
+                    android:text=""/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/img_news_item"
+            android:scaleType="centerCrop"
+            android:src="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:alpha="0.5"
+        android:background="@color/divider"/>
+
+
+</com.example.pgg.qboxdemo.widget.FiveTwoLinearLayout>
