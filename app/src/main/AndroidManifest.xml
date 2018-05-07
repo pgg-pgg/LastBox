@@ -80,6 +80,16 @@
 
         <activity android:name=".wechat.WeChatDetailsActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".module.find.PinImageActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".module.find.FindMoreActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".module.find.ChinaCalendarActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".module.find.ConstellationActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".module.find.JokeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".WebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".module.find.QueryInfoActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
