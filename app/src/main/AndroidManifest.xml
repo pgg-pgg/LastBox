@@ -77,6 +77,9 @@
 
         <activity android:name=".news_details.NewsDetailsActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".wechat.WeChatDetailsActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
