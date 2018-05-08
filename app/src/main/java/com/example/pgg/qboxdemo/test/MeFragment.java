@@ -22,7 +22,12 @@ import com.example.pgg.qboxdemo.me.SettingActivity;
 import com.example.pgg.qboxdemo.me.UserInfoActivity;
 import com.example.pgg.qboxdemo.me.ZxingActivity;
 import com.example.pgg.qboxdemo.me.weather.WeatherActivity;
+import com.example.pgg.qboxdemo.model.entities.RefreshMeFragmentEvent;
 import com.example.pgg.qboxdemo.utils.SPUtils;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 
@@ -83,8 +88,15 @@ public class MeFragment extends BaseFragment {
 
     @Override
     public void initView() {
-
+        EventBus.getDefault().register(this);
         initUserInfo();
+    }
+
+     @Subscribe(threadMode = ThreadMode.MAIN)
+    public void OnRefreshUserInfo(RefreshMeFragmentEvent event) {
+        if (event.getMark_code() == 0x1000) {
+            initUserInfo();
+        }
     }
 
     private void initUserInfo() {
@@ -143,7 +155,7 @@ public class MeFragment extends BaseFragment {
 
     @Override
     public void onDestroy() {
-
+        EventBus.getDefault().unregister(this);
         super.onDestroy();
     }
 }

@@ -50,4 +50,13 @@
     <string name="text_e_commerce">必不可少的工具大全</string>
     <string name="empty_no_data">没有请求到数据，点击重试...</string>
     <string name="empty_network_error">网络错误，点击重试！</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="name">姓名</string>
+    <string name="editPersonInfo">编辑个人信息</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="yourSay">一句话描述</string>
+    <string name="save">保存</string>
+    <string name="address">居住地</string>
+
 </resources>

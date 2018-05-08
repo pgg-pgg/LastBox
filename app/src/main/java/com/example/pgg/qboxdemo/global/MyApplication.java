@@ -15,6 +15,7 @@ import com.mob.MobSDK;
 public class MyApplication extends Application {
     private static MainActivity sMainActivity = null;
     private static MyApplication mInstance;
+    public static final boolean USE_SAMPLE_DATA = false;
     /**
      * 屏幕宽度
      */

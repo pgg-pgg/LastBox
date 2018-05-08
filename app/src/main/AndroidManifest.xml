@@ -90,6 +90,7 @@
         <activity android:name=".module.find.JokeActivity" android:screenOrientation="portrait"/>
         <activity android:name=".WebViewActivity" android:screenOrientation="portrait"/>
         <activity android:name=".module.find.QueryInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".module.weather.AddressActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

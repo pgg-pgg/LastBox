@@ -4,6 +4,7 @@ import android.os.Environment;
 
 import com.example.pgg.qboxdemo.network.api.AllCategoryApi;
 import com.example.pgg.qboxdemo.network.api.ChinaCalendarApi;
+import com.example.pgg.qboxdemo.network.api.CityApi;
 import com.example.pgg.qboxdemo.network.api.ConstellationApi;
 import com.example.pgg.qboxdemo.network.api.DayJokeApi;
 import com.example.pgg.qboxdemo.network.api.FindBgApi;
@@ -36,6 +37,7 @@ public class NetWork {
     private static DayJokeApi sDayJokeApi;
     private static FindBgApi sFindBgApi;
     public static ChinaCalendarApi sChinaCalendarApi;
+    public static CityApi sCityApi;
 
     private static final long cacheSize=1024*1024*20;//缓存文件大小
     private static String cacheDirectory= Environment.getExternalStorageState()+"/okhttpcaches";
@@ -133,5 +135,18 @@ public class NetWork {
             sChinaCalendarApi= build.create(ChinaCalendarApi.class);
         }
         return sChinaCalendarApi;
+    }
+
+    public static CityApi getCityApi(){
+        if (sCityApi==null){
+            Retrofit build = new Retrofit.Builder()
+                    .client(cacheClient)
+                    .baseUrl("https://api.heweather.com/")
+                    .addCallAdapterFactory(rxJavaCallAdapterFactory)
+                    .addConverterFactory(gsonConverterFactory)
+                    .build();
+            sCityApi=build.create(CityApi.class);
+        }
+        return sCityApi;
     }
 }
