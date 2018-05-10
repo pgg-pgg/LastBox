@@ -283,8 +283,8 @@ public class CalendarActivity extends BaseCommonActivity implements OnDateSelect
             TextView holiday_info;
             public Holder(View itemView) {
                 super(itemView);
-                holiday_name = (TextView) itemView.findViewById(R.id.name_holiday_item);
-                holiday_info = (TextView) itemView.findViewById(R.id.info_holiday_item);
+                holiday_name =  itemView.findViewById(R.id.name_holiday_item);
+                holiday_info =  itemView.findViewById(R.id.info_holiday_item);
             }
         }
 
