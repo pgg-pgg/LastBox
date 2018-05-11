@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.pgg.qboxdemo.me.weather.widget.PullRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/w_PullRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/w_WeatherScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        <com.example.pgg.qboxdemo.me.weather.widget.FirstMatchInScrollViewLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/w_WeatherLinearLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="520dp">
+
+                <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/w_now_tmp_minus"
+                    android:layout_marginTop="56dp"
+                    android:layout_toLeftOf="@id/w_now_tmp"
+                    android:text="-"
+                    android:textColor="@color/mxx_text_primary"
+                    android:textSize="72dp"
+                    android:visibility="gone"/>
+
+                <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/w_now_tmp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="56dp"
+                    android:paddingLeft="0dp"
+                    android:text="-"
+                    android:textColor="@color/mxx_text_primary"
+                    android:textSize="72dp"/>
+
+                <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    android:layout_toRightOf="@id/w_now_tmp"
+                    android:text="°"
+                    android:textSize="72dp"
+                    android:textColor="@color/mxx_text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/w_now_cond_text"
+                    android:layout_below="@id/w_now_tmp"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:textColor="@color/w_text_secondary"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/w_now_cond_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/w_text_secondary"
+                    android:id="@+id/w_aqi_text"/>
+
+                <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/w_basic_update_loc"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="228dp"
+                    android:layout_marginRight="8dp"
+                    android:text=""
+                    android:textColor="@color/w_text_secondary"
+                    android:textSize="12dp"
+                    android:layout_alignParentRight="true"/>
+
+                <com.example.pgg.qboxdemo.me.weather.widget.DailyForecastView
+                    android:layout_width="match_parent"
+                    android:layout_height="216dp"
+                    android:id="@+id/w_dailyForecastView"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/w_divider"/>
+
+            <TextView
+                style="@style/w_section_title"
+                android:text="24h预报"/>
+            <com.example.pgg.qboxdemo.me.weather.widget.HourlyForecastView
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:id="@+id/w_hourlyForecastView"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/w_divider"/>
+            <TextView
+                style="@style/w_section_title"
+                android:text="详细信息"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_linearlayout"
+                android:orientation="horizontal"
+                android:paddingRight="16dp"
+                android:showDividers="none">
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/w_todaydetail_temp"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:textSize="52sp"
+                        android:textColor="@color/w_text_primary"/>
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:id="@+id/w_todaydetail_cond_imageview"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/cond_icon_na"
+                        android:visibility="gone"/>
+                    <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/w_todaydetail_bottomline"
+                        android:layout_marginTop="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/w_text_primary"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="体感温度"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_now_fl"
+                            style="@style/todaydetail_info_content"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w_divider_size_secondary"
+                        android:background="@color/w_divider_secondary"/>
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="湿度"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_now_hum"
+                            style="@style/todaydetail_info_content"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w_divider_size_secondary"
+                        android:background="@color/w_divider_secondary"/>
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="能见度"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_now_vis"
+                            style="@style/todaydetail_info_content"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w_divider_size_secondary"
+                        android:background="@color/w_divider_secondary"/>
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="降雨量"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_now_pcpn"
+                            style="@style/todaydetail_info_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/w_divider"/>
+            <TextView
+                style="@style/w_section_title"
+                android:text="空气质量"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_linearlayout"
+                android:orientation="horizontal"
+                android:paddingRight="16dp"
+                android:showDividers="none">
+
+                <com.example.pgg.qboxdemo.me.weather.widget.AqiView
+                    android:layout_width="140dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/w_aqi_view"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/w_aqi_detail_text"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal"
+                    android:text="-"
+                    android:textColor="@color/w_text_primary"
+                    android:textSize="22dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="PM2.5[入肺颗粒物]"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_aqi_pm25"
+                            style="@style/todaydetail_info_content"
+                            android:text="--"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w_divider_size_secondary"
+                        android:background="@color/w_divider_secondary"/>
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="PM10[可吸入颗粒物]"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_aqi_pm10"
+                            style="@style/todaydetail_info_content"
+                            android:text="--"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w_divider_size_secondary"
+                        android:background="@color/w_divider_secondary"/>
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="SO₂[二氧化硫]"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_aqi_so2"
+                            style="@style/todaydetail_info_content"
+                            android:text="--"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w_divider_size_secondary"
+                        android:background="@color/w_divider_secondary"/>
+
+                    <LinearLayout style="@style/todaydetail_info_layout">
+
+                        <TextView
+                            style="@style/todaydetail_info_title"
+                            android:text="NO₂[二氧化氮]"/>
+
+                        <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                            android:id="@+id/w_aqi_no2"
+                            style="@style/todaydetail_info_content"
+                            android:text="--"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:divider="@drawable/divider_linearlayout"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:visibility="gone">
+
+                <LinearLayout style="@style/todaydetail_info_layout">
+                    <TextView
+                        android:id="@+id/w_now_wind_dir"
+                        style="@style/todaydetail_info_title"
+                        android:text="风向"/>
+
+                    <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                        android:id="@+id/w_now_wind_sc"
+                        style="@style/todaydetail_info_content"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/todaydetail_info_layout">
+
+                    <TextView
+                        style="@style/todaydetail_info_title"
+                        android:text="气压(mb)"/>
+
+                    <com.example.pgg.qboxdemo.me.weather.widget.FontTextView
+                        android:id="@+id/w_now_pres"
+                        style="@style/todaydetail_info_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.example.pgg.qboxdemo.me.weather.widget.FirstMatchInScrollViewLinearLayout>
+
+    </ScrollView>
+
+</com.example.pgg.qboxdemo.me.weather.widget.PullRefreshLayout>
