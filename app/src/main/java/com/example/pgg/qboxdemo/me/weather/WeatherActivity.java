@@ -24,10 +24,8 @@ import com.example.pgg.qboxdemo.R;
 import com.example.pgg.qboxdemo.me.weather.draw.DynamicWeather;
 import com.example.pgg.qboxdemo.module.weather.api.ApiManager;
 import com.example.pgg.qboxdemo.utils.UiUtil;
-
-import net.lucode.hackware.magicindicator.buildins.UIUtil;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -37,7 +35,7 @@ import java.util.List;
 public class WeatherActivity extends FragmentActivity {
 
     public static Typeface typeface;
-    public SimpleFragmentPagerFragment mFragmentPagerFragment;
+    public SimpleFragmentPagerAdapter mFragmentPagerAdapter;
     public List<BaseWeatherFragment> mFragmentList;
 
     public static Typeface getTypeface(Context context){
@@ -47,10 +45,6 @@ public class WeatherActivity extends FragmentActivity {
     private DynamicWeather weatherView;
     private ViewPager viewPager;
     AlphaAnimation alphaAnimation;
-
-    public ViewPager getViewPager(){
-        return viewPager;
-    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -104,23 +98,64 @@ public class WeatherActivity extends FragmentActivity {
         final BaseWeatherFragment[] fragments=new BaseWeatherFragment[selectdAreas.size()];
         for (int i=0;i<selectdAreas.size();i++){
             final ApiManager.Area area=selectdAreas.get(i);
+            fragments[i]=WeatherFragment.makeInstance(area,ApiManager.loadWeather(this,area.id));
         }
+
+        mFragmentList= Arrays.asList(fragments);
+        mFragmentPagerAdapter=new SimpleFragmentPagerAdapter(getSupportFragmentManager(),mFragmentList);
+        viewPager.setAdapter(mFragmentPagerAdapter);
+        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                weatherView.setDrawerType(((SimpleFragmentPagerAdapter)viewPager.getAdapter()).getItem(position).getDrawerType());
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
+            }
+        });
     }
 
     /**
      * 更换天气元素
      */
     public void updateCurDrawerType() {
-
+        weatherView.setDrawerType(((SimpleFragmentPagerAdapter) viewPager.getAdapter()).getItem(viewPager.getCurrentItem()).getDrawerType());
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        weatherView.onResume();
+    }
 
-    static class SimpleFragmentPagerFragment extends FragmentPagerAdapter{
+    @Override
+    protected void onPause() {
+        weatherView.onPause();
+        viewPager.clearAnimation();
+        alphaAnimation.cancel();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        weatherView.onDestroy();
+        super.onDestroy();
+    }
+
+    static class SimpleFragmentPagerAdapter extends FragmentPagerAdapter{
 
         private List<BaseWeatherFragment> fragments;
 
         @Override
-        public Fragment getItem(int position) {
+        public BaseWeatherFragment getItem(int position) {
             BaseWeatherFragment fragment=fragments.get(position);
             fragment.setRetainInstance(true);//保存fragment
             return fragment;
@@ -136,7 +171,7 @@ public class WeatherActivity extends FragmentActivity {
             return fragments==null?0:fragments.size();
         }
 
-        public SimpleFragmentPagerFragment(FragmentManager fm,List<BaseWeatherFragment> fragments) {
+        public SimpleFragmentPagerAdapter(FragmentManager fm, List<BaseWeatherFragment> fragments) {
             super(fm);
             this.fragments=fragments;
         }

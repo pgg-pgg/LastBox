@@ -351,8 +351,230 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_divider_size"
+                android:background="@color/w_divider"/>
+            <!-- 太阳和风速 -->
+
+            <TextView
+                style="@style/w_section_title"
+                android:text="太阳和风"/>
+
+            <com.example.pgg.qboxdemo.me.weather.widget.AstroView
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:id="@+id/w_astroView"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_divider_size"
+                android:background="@color/w_divider"/>
+
+            <TextView
+                style="@style/w_section_title"
+                android:text="生活指数"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    style="@style/suggestion_image"
+                    android:src="@drawable/ic_suggestion_comf"/>
+
+                <TextView
+                    style="@style/suggestion_title"
+                    android:textSize="16sp"
+                    android:textColor="@color/w_text_primary"
+                    android:text="综合"/>
+                <TextView
+                    android:id="@+id/w_suggestion_comf_brf"
+                    style="@style/suggestion_brf"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/w_suggestion_comf"
+                    style="@style/suggestion_info_content"
+                    android:layout_below="@id/w_suggestion_comf_brf"/>
+            </RelativeLayout>
+            <View style="@style/suggestion_divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    style="@style/suggestion_image"
+                    android:src="@drawable/ic_suggestion_drsg"/>
+
+                <TextView
+                    style="@style/suggestion_title"
+                    android:text="穿衣"
+                    android:textColor="@color/w_text_primary"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_drsg_brf"
+                    style="@style/suggestion_brf"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_drsg"
+                    style="@style/suggestion_info_content"
+                    android:layout_below="@+id/w_suggestion_drsg_brf"/>
+            </RelativeLayout>
+
+            <View style="@style/suggestion_divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    style="@style/suggestion_image"
+                    android:src="@drawable/ic_suggestion_uv"/>
+
+                <TextView
+                    style="@style/suggestion_title"
+                    android:text="紫外线"
+                    android:textColor="@color/w_text_primary"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_uv_brf"
+                    style="@style/suggestion_brf"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_uv"
+                    style="@style/suggestion_info_content"
+                    android:layout_below="@+id/w_suggestion_uv_brf"/>
+            </RelativeLayout>
+
+            <View style="@style/suggestion_divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    style="@style/suggestion_image"
+                    android:src="@drawable/ic_suggestion_sport"/>
+
+                <TextView
+                    style="@style/suggestion_title"
+                    android:text="运动"
+                    android:textColor="@color/w_text_primary"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_sport_brf"
+                    style="@style/suggestion_brf"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_sport"
+                    style="@style/suggestion_info_content"
+                    android:layout_below="@+id/w_suggestion_sport_brf"/>
+            </RelativeLayout>
+
+            <View style="@style/suggestion_divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    style="@style/suggestion_image"
+                    android:src="@drawable/ic_suggestion_flu"/>
+
+                <TextView
+                    style="@style/suggestion_title"
+                    android:text="感冒"
+                    android:textColor="@color/w_text_primary"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_flu_brf"
+                    style="@style/suggestion_brf"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_flu"
+                    style="@style/suggestion_info_content"
+                    android:layout_below="@+id/w_suggestion_flu_brf"/>
+            </RelativeLayout>
+
+            <View style="@style/suggestion_divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    style="@style/suggestion_image"
+                    android:src="@drawable/ic_suggestion_trav"/>
+
+                <TextView
+                    style="@style/suggestion_title"
+                    android:text="旅游"
+                    android:textColor="@color/w_text_primary"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_tarv_brf"
+                    style="@style/suggestion_brf"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_tarv"
+                    style="@style/suggestion_info_content"
+                    android:layout_below="@+id/w_suggestion_tarv_brf"/>
+            </RelativeLayout>
+
+            <View style="@style/suggestion_divider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp">
+
+                <ImageView
+                    style="@style/suggestion_image"
+                    android:src="@drawable/ic_suggestion_cw"/>
+
+                <TextView
+                    style="@style/suggestion_title"
+                    android:text="洗车"
+                    android:textColor="@color/w_text_primary"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_cw_brf"
+                    style="@style/suggestion_brf"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/w_suggestion_cw"
+                    style="@style/suggestion_info_content"
+                    android:layout_below="@+id/w_suggestion_cw_brf"/>
+            </RelativeLayout>
+
+            <View style="@style/suggestion_divider"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="和风天气 | 中国天气网"
+                android:textColor="@color/w_text_secondary"
+                android:textSize="12dp"/>
         </com.example.pgg.qboxdemo.me.weather.widget.FirstMatchInScrollViewLinearLayout>
-
     </ScrollView>
-
 </com.example.pgg.qboxdemo.me.weather.widget.PullRefreshLayout>
