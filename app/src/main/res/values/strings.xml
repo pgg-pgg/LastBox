@@ -27,6 +27,10 @@
     <string name="transition_userhead">transition_userhead</string>
 
     <string name="title_activity_ledmagic">LEDMagicActivity</string>
+    <string name="title_activity_ledauto">LEDAutoActivity</string>
+    <string name="title_activity_ledsingle">LEDSingleActivity</string>
+
+
     <string name="title_activity_joke">笑话大全</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="action_random">随机笑话</string>

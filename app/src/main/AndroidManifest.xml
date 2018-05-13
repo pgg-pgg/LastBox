@@ -91,6 +91,24 @@
         <activity android:name=".WebViewActivity" android:screenOrientation="portrait"/>
         <activity android:name=".module.find.QueryInfoActivity" android:screenOrientation="portrait"/>
         <activity android:name=".module.weather.AddressActivity" android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".me.LEDMagicActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_ledmagic"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme"/>
+        <activity
+            android:name=".me.LEDAutoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_ledauto"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme"/>
+        <activity android:name=".me.LEDSingleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_ledsingle"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme"/>
     </application>
 
 </manifest>

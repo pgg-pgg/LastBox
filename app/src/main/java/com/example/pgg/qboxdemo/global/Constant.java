@@ -20,10 +20,10 @@ public interface Constant {
     String USER_NAME = "USER_NAME";
 
     String USER_HEADER = "USER_HEADER";
-    String USER_GEYAN ="USER_GEYAN" ;
+    String USER_GEYAN = "USER_GEYAN";
     int NEWSFRAGMENT_CATEGORYACTIVITY_REQUESTCODE = 0x0001;
     int NEWSFRAGMENT_CATEGORYACTIVITY_RESULTCODE = 0x0010;
-    String TAG_EXIT ="TAG_EXIT" ;
+    String TAG_EXIT = "TAG_EXIT";
 
     String SLLMS = "省流量模式";
     int REQUEST_CODE_ADDRESS = 0x1100;
@@ -32,7 +32,6 @@ public interface Constant {
     String STAR_IS_OPEN = "today_in_history";
     String STUFF_IS_OPEN = "stuff";
     String JOKE_IS_OPEN = "joke";
-
 
 
     /**
@@ -49,4 +48,13 @@ public interface Constant {
     String USER_ADDRESS_LAT = "user_address_lat";
     String USER_ADDRESS_LON = "user_address_lon";
     String USER_ADDRESS_PROV = "user_address_prov";
+
+
+    String LED_CONTENT = "LED_CONTENT";
+    String LED_FONT_COLOR = "LED_FONT_COLOR";
+    String LED_BG_COLOR = "LED_BG_COLOR";
+    String LED_ROLL_SPEED = "LED_ROLL_SPEED";
+    String LED_MAGIC_STYLE = "LED_MAGIC_STYLE";
+    String LED_SINGLE_ISH = "LED_MAGIC_STYLE";
+    String LED_LINES = "led_lines";
 }
