@@ -240,7 +240,8 @@ public class FindFragment extends BaseFragment implements View.OnClickListener {
                 Intent intent = new Intent(getContext(), WebViewActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("url", "https://m.kuaidi100.com/");
-                intent.putExtra("bundle", bundle);
+                bundle.putString("title", "快递查询");
+                intent.putExtras(bundle);
                 startActivity(intent);
                 break;
             case "黄金数据":
