@@ -30,6 +30,21 @@
     <string name="title_activity_ledauto">LEDAutoActivity</string>
     <string name="title_activity_ledsingle">LEDSingleActivity</string>
 
+    <string name="open_info">开源许可</string>
+    <string name="statement">声明</string>
+
+
+
+    <!-- auto update功能 -->
+    <string name="android_auto_update_dialog_title">发现新版本</string>
+    <string name="android_auto_update_notify_ticker">发现新版本,点击进行升级</string>
+    <string name="android_auto_update_notify_content">发现新版本,点击进行升级</string>
+    <string name="android_auto_update_dialog_btn_download">立即下载</string>
+    <string name="android_auto_update_dialog_btn_cancel">以后再说</string>
+    <string name="android_auto_update_toast_no_new_update">已经是最新版本</string>
+    <string name="android_auto_update_download_progress">正在下载:%1$d%%</string>
+    <string name="android_auto_update_dialog_checking">正在检查版本</string>
+
 
     <string name="title_activity_joke">笑话大全</string>
     <string name="section_format">Hello World from section: %1$d</string>
@@ -62,5 +77,37 @@
     <string name="yourSay">一句话描述</string>
     <string name="save">保存</string>
     <string name="address">居住地</string>
+
+
+
+    <string name="statement_title">\t最后一盒是一款生活类（微信精选/美文/笑话/星座运势等等）、工具类（日历/二维码/手电筒/老黄历/手机号查询等等）的应用。\n
+        \tAndroid 开发者 胖哥哥飘过 的个人开发作品。\n
+        \t最后一盒尽量以一种简洁纯粹的界面来展现给用户，同时也尽可能多的为用户提供 生活常用的工具和服务。</string>
+    <string name="statement_userinfo">本软件提供给任何个人免费使用和分享，任何个人都有使用本软件中提供的所有功能。本软件不允许任何组织或公司用于其他用途。\n
+        在使用过程中禁止作者外的任何个人或组织或公司或其他群体对本软件进行反编译或修改。</string>
+    <string name="statement_qq">最后一盒是一款使用完全免费的应用，是个人闲余时间因喜好开发并通过网络分享给大家的非商业性的应用，如果用户在使用过程中发现收费的地方或者存在收费才能使用的功能请举报给作者。同时本应用的数据，来自聚合数据平台、和风天气等平台的免费开放API； 相关功能来自各个第三方开放平台；开发中使用大量开源框架，详情查看“开源许可”。\n\n
+	最后一盒内部使用的图标或图片，大多来自网络免费资源，如果发现存在侵权的资源，请及时联系作者，作者会及时在后续版本中去除。本着本软件从不用于商业用途，对于可能造成的侵权只付采取相应措施的责任，不负任何法律相关的责任。</string>
+
+    <string name="statement_syqhzscq">此应用及一切属于本应用的所有相关的知识产权、所有权等权利都属于 胖哥哥飘过 个人永久所有，在未事先获得 胖哥哥飘过 书面同意的情况下，你不应：\n
+        \t（Ⅰ）复制、租赁、出售、转让、分配、再授权、分解、逆向工程或反编译、修改或变更任何部分或全部的本应用；\t\n
+        \t（Ⅱ）以虚假身份或第三方身份使用本应用;\t\n
+        \t（Ⅲ）出售或以其他方式利用本应用获利；\t\n
+        \t（Ⅳ）行使其他损害 OCN.Yang 利益的行为。\t</string>
+    <string name="statement_mail">(以上是本协议的全部内容)基于本应用或本协议及相关协议、规则的任何问题，您可以随时邮件联系我们，邮箱地址：979150046@qq.com</string>
+    <string name="title_activity_about_me">关于最后一盒</string>
+    <string name="statement_import">\t上面的协议什么的都是一些没用的话，从这里开始才是重点，才是重点，重点，重要的话说三遍：\t\n\n
+        \t 1.本应用目前是一个人开发，且为了赶上线时间，开发的比较仓促，我不得不承认，目前的版本存在很多不合理不完善的地方，这些问题都会在后续的更新中一一改善和提升。 \n
+    \t 2.本应用的数据主要来自聚合平台的免费数据，一开始作者天真的以为免费的数据随意用就行了。最后发现，聚合对不同数据每天的请求次数做了不同限制，比如笑话数据每天只有200次的请求次数，也就是说如何当你在使用的过程中发现请求不到数据了，很可能是当天的请求次数已经用完了，第二天就能正常使用了。\t\n
+    \t 3.基于上面第2条，要想提高数据的请求次数，要每月支付几百元的费用才能提高，作者也是一个初出茅庐的小生，真心支付不起。但是如果后期用户增多的话，作者会想一切办法提高数据的请求次数的。（同时如果你喜欢本应用也有能力的话，可以到“关于小秋魔盒”赞助作者部分） \t\n
+    \t 4.作者在这里像所有人承诺，作者是本着兴趣开发的本应用，绝不作为商业应用，无论什么时候，本应用不会绝不会收费，也绝不会引入广告变相收费 \t\n
+    \t 5.如果细心的朋友会发现，目前的微信精选文章中包含了大量的广告。但是请你不要先着急骂作者，这里广告是请求聚合数据网页中自带的（你可以在浏览器中打开看看，广告还是在的），并不是作者引入的（所以说，天上不会掉馅饼，免费的数据都是坑）。但是作者在后续中会想一些办法通过技术手段将这些广告去除。 \t\n
+    \t 6.这里调侃一下程序的设计问题呀，作者是一个地地道道的程序猿攻城狮，真心不会设计界面和搭配颜色，也不认识设计尸妹子。所以如果你愿意为本应用的设计提出改进的建议的话，请联系作者，或者将设计图或建议发送到我邮箱，如果得到采纳的话，会将你的大名并入共同设计的名单中。 \t\n</string>
+    <string name="wechat_select">微信精选</string>
+    <string name="title_activity_news">NewsActivity</string>
+
+
+    <string name="sldinglayout_bg_power_info">author site: www.pgg-pgg.com</string>
+    <string name="sldinglayout_bg_developer_info">©2015 - 2018  Developed by pgg-pgg</string>
+    <string name="recommend">推荐</string>
 
 </resources>

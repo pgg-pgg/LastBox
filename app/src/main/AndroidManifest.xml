@@ -81,9 +81,6 @@
         <activity android:name=".wechat.WeChatDetailsActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".module.find.PinImageActivity"
-            android:screenOrientation="portrait"/>
-
         <activity android:name=".module.find.FindMoreActivity" android:screenOrientation="portrait"/>
         <activity android:name=".module.find.ChinaCalendarActivity" android:screenOrientation="portrait"/>
         <activity android:name=".module.find.ConstellationActivity" android:screenOrientation="portrait"/>
@@ -91,6 +88,7 @@
         <activity android:name=".WebViewActivity" android:screenOrientation="portrait"/>
         <activity android:name=".module.find.QueryInfoActivity" android:screenOrientation="portrait"/>
         <activity android:name=".module.weather.AddressActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".me.PinImageActivity" android:screenOrientation="portrait"/>
 
         <activity
             android:name=".me.LEDMagicActivity"
@@ -109,6 +107,17 @@
             android:label="@string/title_activity_ledsingle"
             android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme"/>
+
+        <activity android:name=".me.ZxingStartActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".me.AboutMeActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".me.AccountActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".me.StatementActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".me.WeatherAddressActivity" android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

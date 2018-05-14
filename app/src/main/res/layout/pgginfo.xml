@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/aboutme.title"
+        android:text="个人简介"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/aboutme.text"
+            android:text="名字："/>
+
+        <TextView
+            style="@style/aboutme.text"
+            android:text="胖哥哥飘过"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/aboutme.text"
+        android:text="职业：Android 开发者"/>
+
+    <TextView
+        style="@style/aboutme.text"
+        android:text="坐标：陕西 西安"/>
+
+    <TextView
+        style="@style/aboutme.title"
+        android:text="联系方式"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/aboutme.text"
+            android:text="邮箱："/>
+
+        <TextView
+            android:id="@+id/my_mail"
+            style="@style/aboutme.text"
+            android:text="979150046@qq.com"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/aboutme.title"
+        android:text="出没地点"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/aboutme.text"
+            android:text="CSDN："/>
+
+        <TextView
+            android:id="@+id/my_jianshu"
+            style="@style/aboutme.text"
+            android:text="http://blog.csdn.net/pgg_cold"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/aboutme.text"
+            android:text="GitHub："/>
+
+        <TextView
+            android:id="@+id/my_github"
+            style="@style/aboutme.text"
+            android:text="https://github.com/pgg-pgg"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/aboutme.title"
+        android:text="关注/赞助"/>
+
+    <LinearLayout
+        android:id="@+id/weibo_aboutme"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_bg_click"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pggweibo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                style="@style/aboutme.text"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="新浪微博：胖哥哥飘过"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/my_sinaweibo"
+                style="@style/aboutme.text"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="关注我，时刻查看最近动态"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wechat_aboutme"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_bg_click"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pggwechat"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                style="@style/aboutme.text"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="微信：Pgg340711"
+                android:textStyle="bold"/>
+
+            <TextView
+                style="@style/aboutme.text"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="有问题反馈可加微信，或可扫二维码赞助一下"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alipay_aboutme"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_bg_click"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pggzhifubao"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                style="@style/aboutme.text"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="支付宝"
+                android:textStyle="bold"/>
+
+            <TextView
+                style="@style/aboutme.text"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="感觉App不错，且你的条件允许，可以扫描二维码赞助一下"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

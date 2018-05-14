@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_webpage"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@color/white"
+            app:title="开源许可">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.example.pgg.qboxdemo.widget.slidinglayout.SlidingLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/web_layout"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:top_max="100dp"
+        app:sliding_mode="top"
+        app:background_view="@layout/slidinglayout_bg">
+
+    </com.example.pgg.qboxdemo.widget.slidinglayout.SlidingLayout>
+
+</LinearLayout>

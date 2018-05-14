@@ -57,4 +57,26 @@ public interface Constant {
     String LED_MAGIC_STYLE = "LED_MAGIC_STYLE";
     String LED_SINGLE_ISH = "LED_MAGIC_STYLE";
     String LED_LINES = "led_lines";
+
+
+    String FAB_LOCATION = "fab_location";
+
+    String XXTS = "消息推送";
+    String ZDYTS = "自定义推送";
+
+
+    //QQ
+    String QQ_USERID = "qq_id";
+    String QQ_USERNAME = "qq_name";
+    String QQ_USERICON = "qq_icon";
+    //SinaWeibo
+    String SINAWEIBO_USERID = "SinaWeibo_id";
+    String SINAWEIBO_USERNAME = "SinaWeibo_name";
+    String SINAWEIBO_USERICON = "SinaWeibo_icon";
+    //Wechat
+    String WECHAT_USERID = "Wechat_id";
+    String WECHAT_USERNAME = "Wechat_name";
+    String WECHAT_USERICON = "Wechat_icon";
+    //phone
+    String USER_PHONE = "user_phone";
 }
