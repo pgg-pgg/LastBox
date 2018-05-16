@@ -110,4 +110,12 @@
     <string name="sldinglayout_bg_developer_info">©2015 - 2018  Developed by pgg-pgg</string>
     <string name="recommend">推荐</string>
 
+
+    <string name="select_browser">请选择浏览器</string>
+    <string name="no_browser_choose">没有在本机找到可供使用的浏览器！</string>
+
+    <string name="copysuccess">复制成功</string>
+    <string name="copyfail">复制地址出错</string>
+    <string name="last_page">已经是最后一页了。</string>
+
 </resources>
